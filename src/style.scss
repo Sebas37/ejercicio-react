@@ -1,0 +1,16 @@
+.center {
+  background-color: #003a67;
+  margin: auto;
+  color: #fff;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  width: 40%;
+  border: 50px solid;
+  border-image: linear-gradient(to bottom, #084e85, #003a67) 1;
+  // border: 50px solid linear-gradient(#084e85, #084e85);;
+  padding: 10px;
+}
+.title {
+  text-align: center;
+  font-weight: 900;
+}

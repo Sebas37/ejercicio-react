@@ -4,7 +4,7 @@
   "description": "Ejercicio react",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-serve --open",
+    "start": "cross-env NODE_ENV=development webpack-serve --host=192.168.0.28 --open",
     "build": "cross-env NODE_ENV=production webpack",
     "format": "prettier --write 'packages/**/*.js'",
     "test": "jest --watchAll --coverage",
@@ -43,8 +43,9 @@
   },
   "dependencies": {
     "lodash": "4.17.10",
+    "numeral": "^2.0.6",
     "prop-types": "15.6.2",
-    "rc-slider": "^8.6.1",
+    "rc-slider": "^8.7.1",
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "react-hot-loader": "4.3.4"
@@ -102,7 +103,7 @@
     "prettier": "1.14.0",
     "pretty-quick": "1.6.0",
     "sass-loader": "7.1.0",
-    "style-loader": "0.22.0",
+    "style-loader": "^1.0.1",
     "webpack": "4.16.5",
     "webpack-cli": "3.1.0",
     "webpack-merge": "4.1.4",
