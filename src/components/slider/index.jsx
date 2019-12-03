@@ -40,7 +40,7 @@ class CreditSimulator extends Component {
 
   render() {
     const { onChangeText, props } = this;
-    const { prefix, title, min = 0, max = 100 } = props;
+    const { prefix = '', title, min = 0, max = 100 } = props;
     return (
       <>
         <div className={styles.slider}>
@@ -49,7 +49,7 @@ class CreditSimulator extends Component {
               <span>{title}</span>
             </div>
             <div className={styles.sliderValue}>
-              <span>{`${prefix || ''}`}</span>
+              <span>{prefix}</span>
               <input
                 className={styles.sliderValue}
                 type="text"
@@ -63,8 +63,8 @@ class CreditSimulator extends Component {
         </div>
         <Slider
           style={{ width: '95%', margin: 'auto', marginTop: '6rem', hight: 10 }}
-          min={this.props.min}
-          max={this.props.max}
+          min={min}
+          max={max}
           onChange={this.handleChange}
           value={this.state.amount}
         />
@@ -89,6 +89,7 @@ CreditSimulator.propTypes = {
   min: PropTypes.number,
   max: PropTypes.number,
   defaultValue: PropTypes.number,
+  onChange: PropTypes.function,
 };
 
 export default CreditSimulator;
